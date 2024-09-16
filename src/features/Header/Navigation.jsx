@@ -31,7 +31,7 @@ function Navigation() {
   ];
   return (
     <div className=" flex justify-center w-full ">
-      <div className="mx-8 max-w-screen-lg flex justify-between items-center w-full bg-[#efefef]  p-8 shadow-md rounded-b-2xl ">
+      <div className="mx-4 z-50 max-w-screen-lg flex justify-between items-center w-full bg-[#efefef]  p-8 shadow-md rounded-b-2xl ">
         <div className="md:w-3/12">
           <Logo />
         </div>
@@ -75,7 +75,7 @@ function Navigation() {
         ) : (
           <div className=" hidden md:block w-full ">
             <div className=" flex w-full justify-between ">
-              <ul className="flex gap-x-6 lg:pr-8 items-center text-sm">
+              <ul className="flex gap-x-6 lg:pr-8 items-center text-sm text-gray-500">
                 {options.map((item) => (
                   <li key={item.label}>
                     <NavLink
