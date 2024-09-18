@@ -5,6 +5,7 @@ import { FaAngleLeft } from "react-icons/fa6";
 import MoreInformation from "../ui/MoreInformation";
 import CarsLogo from "../ui/CarsLogo";
 import WhyComponent from "../ui/WhyComponent";
+import CategoryList from "../features/Category/CategoryList";
 
 function Home() {
   return (
@@ -45,6 +46,7 @@ function Home() {
       <div className=" mt-16">
         <WhyComponent/>
       </div>
+      <CategoryList/>
     </div>
   );
 }
