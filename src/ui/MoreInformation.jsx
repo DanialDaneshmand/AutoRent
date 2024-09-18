@@ -9,8 +9,8 @@ import { HiMagnifyingGlass } from "react-icons/hi2";
 function MoreInformation() {
   const [startDate, setStartDate] = useState(new Date());
   return (
-    <div className=" w-full flex justify-center ">
-      <div className="p-8 max-w-screen-lg w-full border mx-4 shadow-md rounded-xl  bg-white mt-16 ">
+    <div className=" w-full flex justify-center  ">
+      <div className="   p-8 max-w-screen-lg w-full border mx-4 shadow-md rounded-xl  bg-white mt-16 ">
         <div className="flex flex-col-reverse sm:flex-row gap-y-4 sm:gap-y-0 sm:justify-between gap-x-2 items-center text-sm">
           <div className="flex gap-y-2 md:gap-y-0 md:gap-x-2 flex-col md:flex-row">
             <div className=" hover:bg-blue-600 hover:text-white py-2 px-4 rounded-full border ">

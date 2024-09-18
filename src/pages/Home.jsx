@@ -3,6 +3,8 @@ import Header from "../features/Header/Header";
 import { FaCarRear } from "react-icons/fa6";
 import { FaAngleLeft } from "react-icons/fa6";
 import MoreInformation from "../ui/MoreInformation";
+import CarsLogo from "../ui/CarsLogo";
+import WhyComponent from "../ui/WhyComponent";
 
 function Home() {
   return (
@@ -40,6 +42,9 @@ function Home() {
         </div>
       </Header>
       <MoreInformation />
+      <div className=" mt-16">
+        <WhyComponent/>
+      </div>
     </div>
   );
 }
