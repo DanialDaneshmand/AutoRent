@@ -6,6 +6,7 @@ import MoreInformation from "../ui/MoreInformation";
 import CarsLogo from "../ui/CarsLogo";
 import WhyComponent from "../ui/WhyComponent";
 import CategoryList from "../features/Category/CategoryList";
+import CarList from "../features/CarList/CarList";
 
 function Home() {
   return (
@@ -47,6 +48,7 @@ function Home() {
         <WhyComponent/>
       </div>
       <CategoryList/>
+      <CarList/>
     </div>
   );
 }

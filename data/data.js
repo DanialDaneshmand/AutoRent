@@ -1,4 +1,4 @@
-export const data = [
+export const cars = [
   {
     id: 1,
     imageSrc: "/images/coupe.jpg",
@@ -32,15 +32,15 @@ export const data = [
     sort: "public",
   },
   {
-    id: 4,
-    imageSrc: "/images/benz-sl.png",
-    title: "  بنز sl کروک",
-    off: 20,
+    id: 5,
+    imageSrc: "/images/cle.png",
+    title: "بنز   cle",
+    off: 5,
     type: "benz",
-    sort: "public",
+    sort: "economic",
   },
   {
-    id: 5,
+    id: 6,
     imageSrc: "/images/hyundai-sedan.jpg",
     title: " هیوندای سدان",
     off: 15,
@@ -48,7 +48,7 @@ export const data = [
     sort: "public",
   },
   {
-    id: 6,
+    id: 7,
     imageSrc: "/images/bmw-528i.jpg",
     title: " بی ام و 528",
     off: 20,
@@ -56,7 +56,7 @@ export const data = [
     sort: "public",
   },
   {
-    id: 7,
+    id: 8,
     imageSrc: "/images/bmw-m2-coupe.png",
     title: " بی ام و m2",
     off: 5,
@@ -64,7 +64,7 @@ export const data = [
     sort: "luxury",
   },
   {
-    id: 8,
+    id: 9,
     imageSrc: "/images/benz-g-class.png",
     title: " بنز  g class",
     off: 10,
@@ -72,7 +72,7 @@ export const data = [
     sort: "luxury",
   },
   {
-    id: 9,
+    id: 10,
     imageSrc: "/images/toyota-hilux.png",
     title: "تویوتا hilux",
     off: 10,
@@ -80,7 +80,7 @@ export const data = [
     sort: "luxury",
   },
   {
-    id: 10,
+    id: 11,
     imageSrc: "/images/toyota-yaris.png",
     title: "تویوتا yaris",
     off: 10,
@@ -88,21 +88,14 @@ export const data = [
     sort: "economic",
   },
   {
-    id: 11,
+    id: 12,
     imageSrc: "/images/m650.png",
     title: "بی ام و m650",
     off: 5,
     type: "BMW",
     sort: "economic",
   },
-  {
-    id: 12,
-    imageSrc: "/images/cle.png",
-    title: "بنز   cle",
-    off: 5,
-    type: "benz",
-    sort: "economic",
-  },
+  
 ];
 
 export const comments = [
