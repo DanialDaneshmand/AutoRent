@@ -10,13 +10,14 @@ import CarList from "../features/CarList/CarList";
 import HowBooking from "../features/HowBooking/HowBooking";
 import GeneralQuestions from "../features/GeneralQuestions/GeneralQuestions";
 import Comments from "../features/Comments/Comments";
+import Articels from "../features/Articels/Articels";
 
 function Home() {
   return (
     <div className=" flex flex-col items-center">
       <Header>
         <img
-          src="./images/bg3.jpg"
+          src="./images/article/5.jpg"
           alt="auto-rent"
           className="w-full h-screen rounded-b-xl"
         />
@@ -55,6 +56,7 @@ function Home() {
       {/* <HowBooking /> */}
       <GeneralQuestions/>
       <Comments/>
+      <Articels/>
     </div>
   );
 }
