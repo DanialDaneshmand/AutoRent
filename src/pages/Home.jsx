@@ -7,10 +7,12 @@ import CarsLogo from "../ui/CarsLogo";
 import WhyComponent from "../ui/WhyComponent";
 import CategoryList from "../features/Category/CategoryList";
 import CarList from "../features/CarList/CarList";
+import HowBooking from "../features/HowBooking/HowBooking";
+import GeneralQuestions from "../features/GeneralQuestions/GeneralQuestions";
 
 function Home() {
   return (
-    <div>
+    <div className=" flex flex-col items-center">
       <Header>
         <img
           src="./images/bg3.jpg"
@@ -45,10 +47,12 @@ function Home() {
       </Header>
       <MoreInformation />
       <div className=" mt-16">
-        <WhyComponent/>
+        <WhyComponent />
       </div>
-      <CategoryList/>
-      <CarList/>
+      <CategoryList />
+      <CarList />
+      {/* <HowBooking /> */}
+      <GeneralQuestions/>
     </div>
   );
 }
