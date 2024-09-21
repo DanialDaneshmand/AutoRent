@@ -9,6 +9,7 @@ import CategoryList from "../features/Category/CategoryList";
 import CarList from "../features/CarList/CarList";
 import HowBooking from "../features/HowBooking/HowBooking";
 import GeneralQuestions from "../features/GeneralQuestions/GeneralQuestions";
+import Comments from "../features/Comments/Comments";
 
 function Home() {
   return (
@@ -17,9 +18,9 @@ function Home() {
         <img
           src="./images/bg3.jpg"
           alt="auto-rent"
-          className="w-full h-screen"
+          className="w-full h-screen rounded-b-xl"
         />
-        <div className=" absolute z-30 top-0  w-full bg-black opacity-70 h-full"></div>
+        <div className=" absolute z-30 top-0  w-full bg-black opacity-70 h-full rounded-b-xl"></div>
         <div className=" z-30 absolute   bottom-64  flex justify-center w-full">
           <div className="max-w-screen-lg  w-full space-y-8 flex flex-col items-center md:items-start mx-0  sm:mx-8 ">
             <p className=" text-2xl md:text-4xl text-[rgb(253,183,19)] font-bold">
@@ -53,6 +54,7 @@ function Home() {
       <CarList />
       {/* <HowBooking /> */}
       <GeneralQuestions/>
+      <Comments/>
     </div>
   );
 }
