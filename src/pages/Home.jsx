@@ -11,6 +11,7 @@ import HowBooking from "../features/HowBooking/HowBooking";
 import GeneralQuestions from "../features/GeneralQuestions/GeneralQuestions";
 import Comments from "../features/Comments/Comments";
 import Articels from "../features/Articels/Articels";
+import Footer from "../features/Footer/Footer";
 
 function Home() {
   return (
@@ -57,6 +58,7 @@ function Home() {
       <GeneralQuestions/>
       <Comments/>
       <Articels/>
+      <Footer/>
     </div>
   );
 }
