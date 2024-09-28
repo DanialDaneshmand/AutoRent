@@ -4,7 +4,7 @@ function CarListItem({item}) {
   return (
     <div className=" border rounded-xl px-2 bg-white space-y-2">
       <div className=" flex justify-end relative">
-        <span className=" block p-1 z-50 absolute -bottom-12 left-4  rounded-md bg-blue-900 text-white text-sm">
+        <span className=" block p-1 z-30 absolute -bottom-12 left-4  rounded-md bg-blue-900 text-white text-sm">
           <span>{item.off}</span>
           <span>%</span>
         </span>

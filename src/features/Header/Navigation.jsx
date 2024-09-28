@@ -4,31 +4,57 @@ import { NavLink } from "react-router-dom";
 import { HiMagnifyingGlass } from "react-icons/hi2";
 import { HiBars4 } from "react-icons/hi2";
 import { HiMiniXMark } from "react-icons/hi2";
+import Modal from "../../ui/Modal";
+import { cars } from "../../../data/data";
+
+const options = [
+  {
+    path: "/",
+    label: "رزرو خودرو",
+  },
+  {
+    path: "/a",
+    label: " خدمات ما",
+  },
+  {
+    path: "/a",
+    label: " بلاگ",
+  },
+  {
+    path: "/b",
+    label: " درباره ما",
+  },
+  {
+    path: "/c",
+    label: " تماس با ما",
+  },
+];
 
 function Navigation() {
   const [isShow, setIsShow] = useState(false);
-  const options = [
-    {
-      path: "/",
-      label: "رزرو خودرو",
-    },
-    {
-      path: "/a",
-      label: " خدمات ما",
-    },
-    {
-      path: "/a",
-      label: " بلاگ",
-    },
-    {
-      path: "/b",
-      label: " درباره ما",
-    },
-    {
-      path: "/c",
-      label: " تماس با ما",
-    },
-  ];
+  const [open, setOpen] = useState(false);
+  const [value, setValue] = useState("");
+
+  const [searchItems, setSearchItems] = useState([]);
+
+  const handleRemove = (id) => {
+    const newCars = searchItems.filter((item) => item.title.includes(value));
+    const updatedList = newCars.filter((item) => item.id !== id);
+    setSearchItems(updatedList);
+  };
+
+  const handleChange = (e) => {
+    setValue(e.target.value);
+    if (e.target.value === "") {
+      setSearchItems("");
+    } else {
+      const newCars = cars.filter((item) =>
+        item.title.includes(e.target.value)
+      );
+      setSearchItems(newCars);
+    }
+  };
+
   return (
     <div className=" flex justify-center w-full ">
       <div className="mx-4 z-50 max-w-screen-lg flex justify-between items-center w-full bg-[#efefef]  p-8 shadow-md rounded-b-2xl ">
@@ -41,15 +67,37 @@ function Navigation() {
             <div className="  fixed top-0 right-0 h-screen z-45 p-4 px-8 w-full sm:w-[350px] bg-[#efefef]">
               <div className="  flex justify-end mb-12">
                 <button onClick={() => setIsShow(false)}>
-                    <HiMiniXMark/>
+                  <HiMiniXMark />
                 </button>
               </div>
               <div className=" flex  justify-between">
                 <ul className="flex flex-col gap-y-4 items-center  text-gray-500 text-sm">
                   <li className=" text-xl ">
-                    <button>
+                    <button onClick={() => setOpen(true)}>
                       <HiMagnifyingGlass />
                     </button>
+                    <Modal
+                      title="جستجو"
+                      onClose={() => setOpen(false)}
+                      open={open}
+                      searchItems={searchItems}
+                      handleRemove={handleRemove}
+                    >
+                      <div className=" flex py-8">
+                        <div className=" flex items-center justify-center w-full">
+                          <input
+                            type="text"
+                            value={value}
+                            onChange={handleChange}
+                            className=" border rounded-lg py-2 px-4 w-10/12 outline-none"
+                            placeholder="جستجو ..."
+                          />
+                          <span className="-mr-8">
+                            <HiMagnifyingGlass />
+                          </span>
+                        </div>
+                      </div>
+                    </Modal>
                   </li>
                   {options.map((item) => (
                     <li key={item.label}>
@@ -89,9 +137,31 @@ function Navigation() {
                   </li>
                 ))}
                 <li className=" text-xl">
-                  <button>
+                  <button onClick={() => setOpen(true)}>
                     <HiMagnifyingGlass />
                   </button>
+                  <Modal
+                    title="جستجو"
+                    onClose={() => setOpen(false)}
+                    open={open}
+                    searchItems={searchItems}
+                    handleRemove={handleRemove}
+                  >
+                    <div className=" flex py-8">
+                      <div className=" flex items-center justify-center w-full">
+                        <input
+                          type="text"
+                          value={value}
+                          onChange={handleChange}
+                          className=" border rounded-lg py-2 px-4 w-7/12 outline-none"
+                          placeholder="جستجو ..."
+                        />
+                        <span className="-mr-8">
+                          <HiMagnifyingGlass />
+                        </span>
+                      </div>
+                    </div>
+                  </Modal>
                 </li>
               </ul>
               <div>

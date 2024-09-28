@@ -24,7 +24,7 @@ function WhyComponent() {
           </p>
         </div>
         <div className=" w-full flex justify-center">
-          <div className="px-0 max-w-screen-md   md:px-8 gap-y-8 md:gap-y-0 absolute z-50 w-full md:w-auto md:gap-x-6   flex flex-col  md:flex-row -mt-8 md:-mt-16 lg:-mt-0 items-center md:-bottom-24   md:justify-center">
+          <div className="px-0 max-w-screen-md   md:px-8 gap-y-8 md:gap-y-0 absolute z-30 w-full md:w-auto md:gap-x-6   flex flex-col  md:flex-row -mt-8 md:-mt-16 lg:-mt-0 items-center md:-bottom-24   md:justify-center">
             <TextBox icon={<FaBox />}>
               <p className=" sm:text-2xl text-lg font-bold text-gray-800">
                 {" "}

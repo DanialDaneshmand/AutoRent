@@ -27,7 +27,7 @@ function Articels() {
         </div>
         <div className=" grid sm:grid-cols-2 lg:grid-cols-3 gap-6 my-8">
           {newArticels.map((item) => (
-            <div className=" border rounded-xl p-2 bg-white space-y-2">
+            <div key={item.id} className=" border rounded-xl p-2 bg-white space-y-2">
               <div className="border rounded-lg  overflow-hidden">
                 <img
                   src={item.imageSrc}
