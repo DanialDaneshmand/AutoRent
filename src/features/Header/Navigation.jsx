@@ -1,15 +1,16 @@
 import React, { useState } from "react";
 import Logo from "../../ui/Logo";
-import { NavLink } from "react-router-dom";
+import { Link, NavLink } from "react-router-dom";
 import { HiMagnifyingGlass } from "react-icons/hi2";
 import { HiBars4 } from "react-icons/hi2";
 import { HiMiniXMark } from "react-icons/hi2";
-import Modal from "../../ui/Modal";
+import Modal from "../../ui/SearchModal";
 import { cars } from "../../../data/data";
+import SearchModal from "../../ui/SearchModal";
 
 const options = [
   {
-    path: "/",
+    path: "/rent",
     label: "رزرو خودرو",
   },
   {
@@ -76,7 +77,7 @@ function Navigation() {
                     <button onClick={() => setOpen(true)}>
                       <HiMagnifyingGlass />
                     </button>
-                    <Modal
+                    <SearchModal
                       title="جستجو"
                       onClose={() => setOpen(false)}
                       open={open}
@@ -97,7 +98,7 @@ function Navigation() {
                           </span>
                         </div>
                       </div>
-                    </Modal>
+                    </SearchModal>
                   </li>
                   {options.map((item) => (
                     <li key={item.label}>
@@ -113,9 +114,11 @@ function Navigation() {
                   ))}
                 </ul>
                 <div>
-                  <button className=" text-white bg-blue-600 rounded-lg py-2 px-4 text-sm">
-                    ورود / ثبت نام
-                  </button>
+                  <Link to="/login">
+                    <button className=" text-white bg-blue-600 rounded-lg py-2 px-4 text-sm">
+                      ورود / ثبت نام
+                    </button>
+                  </Link>
                 </div>
               </div>
             </div>
@@ -165,9 +168,11 @@ function Navigation() {
                 </li>
               </ul>
               <div>
-                <button className=" text-white bg-blue-600 rounded-lg py-2 px-4 text-sm">
-                  ورود / ثبت نام
-                </button>
+                <Link to="/login">
+                  <button className=" text-white bg-blue-600 rounded-lg py-2 px-4 text-sm">
+                    ورود / ثبت نام
+                  </button>
+                </Link>
               </div>
             </div>
           </div>

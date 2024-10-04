@@ -1,7 +1,7 @@
 import { HiOutlineX } from "react-icons/hi";
 import { HiX } from "react-icons/hi";
 
-function Modal({ onClose, open, title, children, searchItems ,handleRemove}) {
+function SearchModal({ onClose, open, title, children, searchItems ,handleRemove}) {
   return (
     open && (
       <div className="flex  px-4 justify-center pb-8 backdrop-blur-sm bg-opacity-30 fixed top-0 left-0 w-screen  h-screen bg-gray-500 z-50 ">
@@ -53,4 +53,4 @@ function Modal({ onClose, open, title, children, searchItems ,handleRemove}) {
   );
 }
 
-export default Modal;
+export default SearchModal;

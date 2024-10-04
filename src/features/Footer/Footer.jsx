@@ -8,8 +8,8 @@ import { FaCopyright } from "react-icons/fa6";
 
 function Footer() {
   return (
-    <div className="text-sm flex justify-center px-4 w-full mb-16">
-      <div className=" w-full max-w-screen-lg text-gray-300 bg-[rgb(51,51,51)] rounded-xl p-4 sm:p-8">
+    <div className=" text-sm flex justify-center px-4 w-full mb-16">
+      <div className=" w-full max-w-screen-xl text-gray-300 bg-[rgb(51,51,51)] rounded-xl p-4 sm:p-8">
         <TopSection />
         <BottomSection />
         <hr />

@@ -9,7 +9,7 @@ function Articels() {
   const [newArticels, setNewArticles] = useState(articles.slice(0, 3));
   return (
     <div className=" w-full flex justify-center my-16 px-4">
-      <div className=" w-full max-w-screen-lg ">
+      <div className=" w-full max-w-screen-xl ">
         <div className=" flex flex-col items-center  w-full gap-y-2">
           <p className=" text-gray-500 text-lg"> مقالات ما</p>
           <p className=" text-3xl text-gray-800">

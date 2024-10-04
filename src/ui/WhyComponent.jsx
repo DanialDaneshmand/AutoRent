@@ -8,7 +8,7 @@ import TextBox from "./TextBox";
 function WhyComponent() {
   return (
     <div className=" flex justify-center my-16 mx-4 ">
-      <div className="relative max-w-screen-lg rounded-lg ">
+      <div className="relative max-w-screen-xl rounded-lg ">
         <div className="w-full">
           <img src="./images/wall2.jpg" className=" w-full rounded-lg " />
         </div>

@@ -23,7 +23,7 @@ function CarList() {
   }, [categoryItem]);
   return (
     <div className=" flex justify-center">
-      <div className=" w-full max-w-screen-lg flex flex-col items-center">
+      <div className=" w-full max-w-screen-xl flex flex-col items-center">
         <div className=" flex flex-col items-center  w-full gap-y-6">
           <p className=" text-gray-500">مشاهده موجودی خودرو ها</p>
           <p className=" text-2xl sm:text-4xl">
@@ -45,7 +45,7 @@ function CarList() {
             </span>
           </button>
         </div>
-        <div className=" grid grid-cols-1 sm:grid-cols-2 mx-4 lg:grid-cols-3 gap-8 mt-16">
+        <div className=" grid grid-cols-1 sm:grid-cols-2 mx-4  lg:grid-cols-3 gap-8 mt-16">
           {carlist.map((item) => (
             <CarListItem key={item.id} item={item} />
           ))}

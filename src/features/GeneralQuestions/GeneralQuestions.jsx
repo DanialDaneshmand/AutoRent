@@ -7,7 +7,7 @@ function GeneralQuestions() {
   const [selectedId, setSelectedId] = useState(null);
 
   return (
-    <div className=" w-full max-w-screen-lg mb-16">
+    <div className=" w-full max-w-screen-xl mb-16">
       <div className=" w-full text-center my-16 ">
         <p className=" text-gray-500 text-lg">
           پر تکرار ترین سوالاتی که پرسیدید

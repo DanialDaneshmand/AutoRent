@@ -7,7 +7,7 @@ function Comments() {
   const [selectedComment, setSelectedComment] = useState(comments[0]);
   return (
     <div className=" w-full px-4 flex justify-center">
-      <div className=" w-full max-w-screen-lg flex flex-col items-center  ">
+      <div className=" w-full max-w-screen-xl flex flex-col items-center  ">
         <CommentDetail selectedComment={selectedComment} />
         <div className=" h-48 sm:h-auto overflow-y-scroll sm:overflow-auto mt-8 grid sm:grid-cols-2 lg:grid-cols-4 gap-4 sm:gap-8  py-8 w-full mx-8">
           {comments.map((item) => (
