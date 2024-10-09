@@ -7,6 +7,8 @@ import GeneralHeader from "../features/Header/GeneralHeader";
 import GeneralModal from "../ui/GeneralModal";
 import { HiAdjustmentsHorizontal } from "react-icons/hi2";
 import Header from "../features/Header/Header";
+import { HiChevronLeft } from "react-icons/hi2";
+
 
 function Rent() {
   const [open, setOpen] = useState(false);
@@ -23,9 +25,19 @@ function Rent() {
         />
         <div className=" absolute z-30 top-0  w-full bg-black opacity-70 h-full rounded-b-xl"></div>
         <div className=" z-30 absolute   bottom-64  flex justify-center w-full">
-          <p className="  text-4xl text-[rgb(253,183,19)]">اجاره خودرو</p>
+          <div className=" flex flex-col gap-y-2">
+            <p className="  text-4xl text-[rgb(253,183,19)]">اجاره خودرو</p>
+            <p className=" text-gray-400 flex items-center">
+              <span>اتو رنت </span>
+              <span>
+                <HiChevronLeft />
+              </span>
+              <span>لیست خودروهای اجاره ای</span>
+            </p>
+          </div>
         </div>
       </Header>
+
       <div className="flex justify-center py-16">
         <div className=" grid grid-cols-12 w-full max-w-screen-xl">
           <div className="hidden md:block px-4 col-span-3 w-full ">

@@ -1,6 +1,7 @@
 import React from "react";
+import { Link } from "react-router-dom";
 
- function CarListItem({item}) {
+function CarListItem({ item }) {
   return (
     <div className=" border rounded-xl px-2 pb-2 bg-white space-y-2">
       <div className=" flex justify-end relative">
@@ -37,9 +38,11 @@ import React from "react";
         <p className=" text-gray-500 ">مبلغ ضمانت :</p>
         <p className=" font-bold">80 میلیون تومان</p>
       </div>
-      <button className=" py-2 px-5 rounded-lg bg-blue-600 text-white w-full flex justify-center text-sm">
-        درخواست رزرو
-      </button>
+      <Link to="/carDetail" state={{id:item.id}}>
+        <button className=" py-2 px-5 rounded-lg bg-blue-600 text-white w-full flex justify-center text-sm">
+          درخواست رزرو
+        </button>
+      </Link>
     </div>
   );
 }
