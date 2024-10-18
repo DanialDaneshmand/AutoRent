@@ -14,7 +14,7 @@ function GeneralQuestionsItem({item,selectedId,setSelectedId}) {
       >
         <p className=" flex items-center gap-x-2 mb-6 md:mb-4  text-gray-700">
           <span
-            className=" text-blue-600 "
+            className=" text-blue-600 cursor-pointer "
             onClick={() => setSelectedId(selectedId ? "" : item.id)}
           >
             {selectedId === item.id ? (

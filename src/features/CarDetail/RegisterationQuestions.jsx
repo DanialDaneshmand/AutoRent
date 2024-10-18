@@ -80,7 +80,7 @@ function RegisterationQuestions() {
             <span className=" text-blue-600 font-bold text-lg">8,500,000</span>
           </span>
         </div>
-        <Link >
+        <Link to="/userInfo">
           <button className="mt-4 py-2 text-lg px-5 rounded-lg bg-blue-600 text-white w-full flex justify-center ">
             ثبت درخواست 
           </button>
