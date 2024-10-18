@@ -7,6 +7,8 @@ import SignUp from "./pages/SignUp";
 import Rent from "./pages/Rent";
 import CarDetail from "./pages/CarDetail";
 import UserInformation from "./pages/UserInformation";
+import PayMent from "./pages/PayMent";
+
 
 function App() {
   return (
@@ -18,6 +20,7 @@ function App() {
         <Route path="/rent" element={<Rent />} />
         <Route path="/carDetail" element={<CarDetail />} />
         <Route path="/userInfo" element={<UserInformation />} />
+        <Route path="/payment" element={<PayMent />} />
       </Routes>
     </div>
   );

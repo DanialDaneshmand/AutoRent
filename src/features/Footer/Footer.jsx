@@ -85,7 +85,7 @@ function BottomSection() {
           <input
             type="text"
             placeholder="ایمیل خود را وارد کنید"
-            className=" text-gray-500 bg-[rgb(51,51,51)] border px-4 py-3 w-full rounded-lg"
+            className=" text-gray-500 outline-none bg-[rgb(51,51,51)] border px-4 py-3 w-full rounded-lg"
           />
           <button className=" bg-[rgb(253,183,19)] text-[rgb(51,51,51)] my-1  -mr-[65px] px-4 rounded-lg">
             ارسال

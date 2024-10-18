@@ -3,6 +3,9 @@ import { HiOutlineUser } from "react-icons/hi2";
 import TextFeildInfo from "./TextFeildInfo";
 import GeneralModal from "../../ui/GeneralModal";
 import { Link } from "react-router-dom";
+import { HiMiniPhone } from "react-icons/hi2";
+import { HiOutlineMapPin } from "react-icons/hi2";
+import { HiEnvelope } from "react-icons/hi2";
 
 function UserInformationBox() {
   const [open, setOpen] = useState(true);
@@ -16,9 +19,9 @@ function UserInformationBox() {
         <TextFeildInfo icon={<HiOutlineUser />} title="نام" />
         <TextFeildInfo icon={<HiOutlineUser />} title="نام خانوادگی" />
         <TextFeildInfo icon={<HiOutlineUser />} title="کد ملی" />
-        <TextFeildInfo icon={<HiOutlineUser />} title="شماره موبایل" />
-        <TextFeildInfo icon={<HiOutlineUser />} title="ایمیل" />
-        <TextFeildInfo icon={<HiOutlineUser />} title="ادرس" />
+        <TextFeildInfo icon={<HiMiniPhone />} title="شماره موبایل" />
+        <TextFeildInfo icon={<HiEnvelope />} title="ایمیل" />
+        <TextFeildInfo icon={<HiOutlineMapPin />} title="ادرس" />
       </div>
       <div className=" w-full flex justify-center">
         <button
@@ -64,7 +67,7 @@ function UserInformationBox() {
             می طلبد،
           </p>
           <div className=" w-full flex justify-center mt-4">
-            <Link to="payment">
+            <Link to="/payment">
               <button className=" py-2 px-8 rounded-lg bg-blue-600 text-white">
                 تایید و ادامه
               </button>

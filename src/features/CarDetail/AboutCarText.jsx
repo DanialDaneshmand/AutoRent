@@ -1,9 +1,9 @@
-import React from 'react'
-import { cars } from '../../../data/data'
+import React from "react";
+import { cars } from "../../../data/data";
 
-function AboutCarText({state}) {
-    return (
-        <div className=" w-full my-4 bg-white rounded-xl border p-4">
+function AboutCarText({ state }) {
+  return (
+    <div className=" w-full my-4 bg-white rounded-xl border p-4">
       <p className=" text-2xl text-gray-700 font-bold">درباره خودرو</p>
       <div className="border-b mt-2"></div>
       <div className="border-b-2 border-[rgb(253,183,19)] w-24"></div>
@@ -26,7 +26,7 @@ function AboutCarText({state}) {
         </p>
       </div>
     </div>
-    )
+  );
 }
 
-export default AboutCarText
+export default AboutCarText;

@@ -12,7 +12,7 @@ function ProccesItem({ icon, title, active, checked }) {
           </div>
         ) : (
           <div
-            className={`text-lg sm:text4xl  flex justify-center items-center text-gray-500   border w-8 sm:w-16 h-8 sm:h-16 rounded-full ${
+            className={`text-lg sm:text-4xl  flex justify-center items-center text-gray-500   border w-8 sm:w-16 h-8 sm:h-16 rounded-full ${
               active
                 ? "bg-yellow-400 border-yellow-400 text-black"
                 : "bg-gray-100 border-gray-300"
