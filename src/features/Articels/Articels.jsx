@@ -3,6 +3,7 @@ import { FaAngleLeft } from "react-icons/fa6";
 import { articles } from "../../../data/data";
 import { HiOutlineClock } from "react-icons/hi2";
 import { HiOutlineEye } from "react-icons/hi2";
+import ArticelItem from "./ArticelItem";
 
 
 function Articels() {
@@ -27,31 +28,7 @@ function Articels() {
         </div>
         <div className=" grid sm:grid-cols-2 lg:grid-cols-3 gap-6 my-8">
           {newArticels.map((item) => (
-            <div key={item.id} className=" border rounded-xl p-2 bg-white space-y-2">
-              <div className="border rounded-lg  overflow-hidden">
-                <img
-                  src={item.imageSrc}
-                  alt={item.title}
-                  className="w-full h-[200px]"
-                />
-              </div>
-              <p className=" text-lg text-gray-800 ">{item.title}</p>
-              <p className=" text-sm text-gray-500">{item.text}</p>
-              <div className=" flex items-center gap-x-5 text-sm text-gray-500">
-                <span className=" flex items-center gap-x-1">
-                    <span>
-                        <HiOutlineClock/>
-                    </span>
-                    <span>3 دقیقه</span>
-                </span>
-                <span className=" flex items-center gap-x-1">
-                    <span>
-                        <HiOutlineEye/>
-                    </span>
-                    <span>1,213</span>
-                </span>
-              </div>
-            </div>
+            <ArticelItem key={item.id} item={item}/>
           ))}
         </div>
       </div>
