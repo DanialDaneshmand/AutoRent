@@ -1,5 +1,6 @@
 import React from "react";
 import { HiOutlineClipboardDocumentList } from "react-icons/hi2";
+import { Link } from "react-router-dom";
 
 function Conditions() {
   return (
@@ -27,9 +28,15 @@ function Conditions() {
         </div>
       </div>
       <div className=" py-6 px-4 flex justify-between ">
-        <span className="sm:text-xl font-bold">مبلغ قابل پرداخت : 45,480,000 تومان</span>
+        <span className="sm:text-xl font-bold">
+          مبلغ قابل پرداخت : 45,480,000 تومان
+        </span>
         <span>
-            <button className=" bg-blue-600 text-white py-2 px-12 rounded-lg">پرداخت</button>
+          <Link to="/orderDetail">
+            <button className=" bg-blue-600 text-white py-2 px-12 rounded-lg">
+              پرداخت
+            </button>
+          </Link>{" "}
         </span>
       </div>
     </div>

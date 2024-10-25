@@ -8,6 +8,7 @@ import Rent from "./pages/Rent";
 import CarDetail from "./pages/CarDetail";
 import UserInformation from "./pages/UserInformation";
 import PayMent from "./pages/PayMent";
+import OrderDetail from "./pages/OrderDetail";
 
 
 function App() {
@@ -21,6 +22,7 @@ function App() {
         <Route path="/carDetail" element={<CarDetail />} />
         <Route path="/userInfo" element={<UserInformation />} />
         <Route path="/payment" element={<PayMent />} />
+        <Route path="/orderDetail" element={<OrderDetail />} />
       </Routes>
     </div>
   );
