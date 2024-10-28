@@ -10,6 +10,7 @@ import UserInformation from "./pages/UserInformation";
 import PayMent from "./pages/PayMent";
 import OrderDetail from "./pages/OrderDetail";
 import ArticelsPage from "./pages/ArticelsPage";
+import ArticleDetail from "./pages/ArticleDetail";
 
 
 function App() {
@@ -25,6 +26,7 @@ function App() {
         <Route path="/payment" element={<PayMent />} />
         <Route path="/orderDetail" element={<OrderDetail />} />
         <Route path="/articles" element={<ArticelsPage />} />
+        <Route path="/articleDetail" element={<ArticleDetail />} />
       </Routes>
     </div>
   );
