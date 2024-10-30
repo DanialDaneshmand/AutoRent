@@ -10,7 +10,7 @@ function WhyComponent() {
     <div className=" flex justify-center my-16 mx-4 ">
       <div className="relative max-w-screen-xl rounded-lg ">
         <div className="w-full">
-          <img src="./images/wall2.jpg" className=" w-full rounded-lg " />
+          <img src="./images/why.jpg" className=" w-full rounded-lg " />
         </div>
         <div className=" bg-black w-full opacity-60 absolute z-20 top-0 left-0 h-full rounded-lg"></div>
         <div className=" text-center w-full absolute  top-0 left-0 pt-0 sm:pt-4  md:px-32 z-30 text-white p-8 flex flex-col items-center">
