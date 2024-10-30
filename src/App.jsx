@@ -11,6 +11,7 @@ import PayMent from "./pages/PayMent";
 import OrderDetail from "./pages/OrderDetail";
 import ArticelsPage from "./pages/ArticelsPage";
 import ArticleDetail from "./pages/ArticleDetail";
+import ContactUs from "./pages/ContactUs";
 
 
 function App() {
@@ -27,6 +28,7 @@ function App() {
         <Route path="/orderDetail" element={<OrderDetail />} />
         <Route path="/articles" element={<ArticelsPage />} />
         <Route path="/articleDetail" element={<ArticleDetail />} />
+        <Route path="/Contact-us" element={<ContactUs />} />
       </Routes>
     </div>
   );

@@ -26,7 +26,7 @@ const options = [
     label: " درباره ما",
   },
   {
-    path: "/c",
+    path: "/contact-us",
     label: " تماس با ما",
   },
 ];
