@@ -12,6 +12,7 @@ import OrderDetail from "./pages/OrderDetail";
 import ArticelsPage from "./pages/ArticelsPage";
 import ArticleDetail from "./pages/ArticleDetail";
 import ContactUs from "./pages/ContactUs";
+import AboutUs from "./pages/AboutUs";
 
 
 function App() {
@@ -29,6 +30,7 @@ function App() {
         <Route path="/articles" element={<ArticelsPage />} />
         <Route path="/articleDetail" element={<ArticleDetail />} />
         <Route path="/Contact-us" element={<ContactUs />} />
+        <Route path="/about-us" element={<AboutUs />} />
       </Routes>
     </div>
   );

@@ -25,7 +25,7 @@ function WhyComponent() {
         </div>
         <div className=" w-full flex justify-center">
           <div className="px-0 max-w-screen-md   md:px-8 gap-y-8 md:gap-y-0 absolute z-30 w-full md:w-auto md:gap-x-6   flex flex-col  md:flex-row -mt-8 md:-mt-16 lg:-mt-0 items-center md:-bottom-24   md:justify-center">
-            <TextBox icon={<FaBox />}>
+            <TextBox active={true} icon={<FaBox />}>
               <p className=" sm:text-2xl text-lg font-bold text-gray-800">
                 {" "}
                 تحویل در محل{" "}
@@ -35,6 +35,7 @@ function WhyComponent() {
               </p>
             </TextBox>
             <TextBox
+              active={true}
               icon={
                 <span className=" flex items-center ">
                   <Fa4 />
@@ -49,7 +50,7 @@ function WhyComponent() {
                 کارشناسان ما در هر زمان و مکان پاسخگوی شما هستند.
               </p>
             </TextBox>
-            <TextBox icon={<FaCreditCard />}>
+            <TextBox active={true} icon={<FaCreditCard />}>
               <p className=" sm:text-2xl text-lg font-bold text-gray-800">
                 {" "}
                 قیمت مناسب

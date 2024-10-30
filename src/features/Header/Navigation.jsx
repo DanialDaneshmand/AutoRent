@@ -22,7 +22,7 @@ const options = [
     label: " بلاگ",
   },
   {
-    path: "/b",
+    path: "/about-us",
     label: " درباره ما",
   },
   {
