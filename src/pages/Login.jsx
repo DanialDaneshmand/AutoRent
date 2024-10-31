@@ -1,8 +1,11 @@
 import React, { useState } from "react";
 import Logo from "../ui/Logo";
-import { Link } from "react-router-dom";
+import { Link, useNavigate } from "react-router-dom";
+import { useUserDispatch } from "../Context/userContext";
 
 function Login() {
+  const navigate=useNavigate()
+  const setUser = useUserDispatch();
   const [userInfo, setUserInfo] = useState({
     phone: "",
     password: " ",
@@ -12,7 +15,8 @@ function Login() {
   };
   const handleSubmit = (e) => {
     e.preventDefault();
-    console.log(userInfo);
+    setUser(userInfo);
+    navigate("/")
   };
   return (
     <div className=" w-full h-screen flex justify-center items-center">

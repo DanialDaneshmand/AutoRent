@@ -7,6 +7,9 @@ import { HiMiniXMark } from "react-icons/hi2";
 import Modal from "../../ui/SearchModal";
 import { cars } from "../../../data/data";
 import SearchModal from "../../ui/SearchModal";
+import { useUser } from "../../Context/userContext";
+import { HiOutlineUserCircle } from "react-icons/hi2";
+import { HiChevronDown } from "react-icons/hi2";
 
 const options = [
   {
@@ -32,6 +35,8 @@ const options = [
 ];
 
 function Navigation() {
+  const user = useUser();
+
   const [isShow, setIsShow] = useState(false);
   const [open, setOpen] = useState(false);
   const [value, setValue] = useState("");
@@ -58,7 +63,7 @@ function Navigation() {
 
   return (
     <div className=" flex justify-center w-full ">
-      <div className="mx-4 z-50 max-w-screen-lg flex justify-between items-center w-full bg-[#efefef]  p-8 shadow-md rounded-b-2xl ">
+      <div className="mx-4 z-50 max-w-screen-xl flex justify-between items-center w-full bg-[#efefef]  p-8 shadow-md rounded-b-2xl ">
         <div className="md:w-3/12">
           <Logo />
         </div>
@@ -114,11 +119,25 @@ function Navigation() {
                   ))}
                 </ul>
                 <div>
-                  <Link to="/login">
-                    <button className=" text-white bg-blue-600 rounded-lg py-2 px-4 text-sm">
-                      ورود / ثبت نام
-                    </button>
-                  </Link>
+                  {user.phone ? (
+                    <Link to="/user-panel">
+                      <button className=" flex gap-x-2 items-center py-2 px-4 rounded-lg bg-blue-600 text-white">
+                        <span>
+                          <HiOutlineUserCircle className=" text-xl" />
+                        </span>{" "}
+                        <span>{user.phone}</span>
+                        <span>
+                          <HiChevronDown className=" text-xl" />
+                        </span>
+                      </button>
+                    </Link>
+                  ) : (
+                    <Link to="/login">
+                      <button className=" text-white bg-blue-600 rounded-lg py-2 px-4 text-sm">
+                        ورود / ثبت نام
+                      </button>
+                    </Link>
+                  )}
                 </div>
               </div>
             </div>
@@ -168,11 +187,25 @@ function Navigation() {
                 </li>
               </ul>
               <div>
-                <Link to="/login">
-                  <button className=" text-white bg-blue-600 rounded-lg py-2 px-4 text-sm">
-                    ورود / ثبت نام
-                  </button>
-                </Link>
+                {user.phone ? (
+                  <Link to="/user-panel">
+                    <button className=" flex gap-x-2 items-center py-2 px-4 rounded-lg bg-blue-600 text-white">
+                      <span>
+                        <HiOutlineUserCircle className=" text-xl" />
+                      </span>{" "}
+                      <span>{user.phone}</span>
+                      <span>
+                        <HiChevronDown className=" text-xl" />
+                      </span>
+                    </button>
+                  </Link>
+                ) : (
+                  <Link to="/login">
+                    <button className=" text-white bg-blue-600 rounded-lg py-2 px-4 text-sm">
+                      ورود / ثبت نام
+                    </button>
+                  </Link>
+                )}
               </div>
             </div>
           </div>
