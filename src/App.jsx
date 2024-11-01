@@ -19,6 +19,8 @@ import UserPanel from "./pages/UserPanel";
 import Wallet from "./pages/Wallet";
 import Reserve from "./pages/Reserve";
 import MyPayment from "./pages/MyPayment";
+import MyLocations from "./pages/MyLocations";
+import MyComments from "./pages/MyComments";
 
 function App() {
   return (
@@ -42,6 +44,9 @@ function App() {
             <Route path="wallet" element={<Wallet />} />
             <Route path="reserve" element={<Reserve />} />
             <Route path="myPayment" element={<MyPayment />} />
+            <Route path="location" element={<MyLocations />} />
+            <Route path="myComments" element={<MyComments />} />
+            <Route path="exit" element={<MyComments />} />
           </Route>
           <Route path="/*" element={<NotFound />} />
         </Routes>

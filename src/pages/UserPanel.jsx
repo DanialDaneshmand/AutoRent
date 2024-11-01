@@ -44,6 +44,13 @@ const options = [
     title: "نظرات من ",
     path: "/user-panel/myComments",
   },
+  {
+    id: 6,
+    linkIcon: <HiOutlineArrowRightOnRectangle />,
+    title: " خروج",
+    path: "/user-panel/exit",
+    active:true
+  },
 ];
 
 function UserPanel() {
@@ -51,10 +58,7 @@ function UserPanel() {
   const setUser = useUserDispatch();
   const navigate = useNavigate();
 
-  const handleExit = () => {
-    setUser({});
-    navigate("/");
-  };
+  
 
   return (
     <div className=" flex  flex-col items-center ">
@@ -78,8 +82,8 @@ function UserPanel() {
                 to={item.path}
                 className={({ isActive }) =>
                   isActive
-                    ? "text-blue-500 my-2 block"
-                    : "text-gray-500 my-2 block"
+                    ? item.active?"text-red-600 my-2 block":"text-blue-500 my-2 block"
+                    :item.active?"text-red-600 my-2 block": "text-gray-500 my-2 block"
                 }
                 key={item.id}
               >
@@ -94,22 +98,7 @@ function UserPanel() {
                 </span>
               </NavLink>
             ))}
-            <button
-              className="w-full  mt-6 block"
-              onClick={handleExit}
-            >
-              <span className="  flex justify-between items-center">
-                <span className=" flex items-center text-red-600 gap-x-2">
-                  <span className=" text-2xl">
-                    <HiOutlineArrowRightOnRectangle />
-                  </span>
-                  <span>خروج</span>
-                </span>
-                <span>
-                  <HiChevronLeft />
-                </span>
-              </span>
-            </button>
+            
           </div>
         </div>
         <div className=" col-span-12 md:col-span-8 h-full px-4 xl:px-0    my-4 w-full">
