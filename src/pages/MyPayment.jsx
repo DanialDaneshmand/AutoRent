@@ -4,17 +4,19 @@ function MyPayment() {
   return (
     <div>
       <div className=" border-b pb-4">
-        <p className=" text-gray-600 text-lg">پرداخت های من</p>
+        <p className=" text-gray-600 text-lg"> پرداخت های من</p>
       </div>
       <div className=" py-4">
-        <div className=" border my-4 rounded-lg p-4 flex justify-between">
-          <div className=" flex gap-x-4">
+        <div className=" border my-4 rounded-lg p-4 flex flex-col sm:flex-row justify-between">
+          <div className=" flex flex-col items-start sm:flex-row gap-x-4">
+            <div className=" w-full flex justify-center">
             <img
               src="/images/benz-g-class.png"
               className=" w-64 h-64 rounded-lg border"
               alt=""
             />
-            <div className=" flex flex-col h-full  justify-center items-center gap-y-4">
+            </div>
+            <div className=" my-4 sm:my-0 flex flex-col h-full  justify-center items-center gap-y-4">
               <span className="text-gray-600 font-bold">بنز g class</span>
               <span className=" text-sm">
                 <span className=" text-gray-400">مدل :</span>
@@ -38,19 +40,19 @@ function MyPayment() {
             </span>
             <span>
               <span className=" text-gray-400"> دارنده حساب : </span>
-              <span className=" text-gray-600">اتورنت گشتر ایرانیان </span>
+              <span className=" text-gray-600">اتورنت گستر ایرانیان </span>
             </span>
           </div>
         </div>
-        <div className=" border rounded-lg my-4 p-4 flex justify-between">
-          <div className=" flex gap-x-4">
+        <div className=" border my-4 rounded-lg p-4 flex flex-col sm:flex-row justify-between">
+          <div className=" flex flex-col items-start sm:flex-row gap-x-4">
             <img
               src="/images/toyota-land.png"
               className=" w-64 h-64 rounded-lg border"
               alt=""
             />
-            <div className=" flex flex-col h-full  justify-center items-center gap-y-4">
-              <span className="text-gray-600 font-bold">تیوتا لندکروزر</span>
+            <div className=" my-4 sm:my-0 flex flex-col h-full  justify-center items-center gap-y-4">
+              <span className="text-gray-600 font-bold">بنز g class</span>
               <span className=" text-sm">
                 <span className=" text-gray-400">مدل :</span>
                 <span className=" text-gray-600">2024</span>
@@ -62,7 +64,7 @@ function MyPayment() {
             </div>
           </div>
           <div className=" flex flex-col gap-y-2 text-sm justify-center">
-            <span className=" font-bold text-red-600">پرداخت ناموفق</span>
+            <span className=" font-bold text-red-600">پرداخت موفق</span>
             <span>
               <span className=" text-gray-400"> شناسه پرداخت : </span>
               <span className=" text-gray-600">25621385482475</span>
@@ -73,7 +75,7 @@ function MyPayment() {
             </span>
             <span>
               <span className=" text-gray-400"> دارنده حساب : </span>
-              <span className=" text-gray-600">اتورنت گشتر ایرانیان </span>
+              <span className=" text-gray-600">اتورنت گستر ایرانیان </span>
             </span>
           </div>
         </div>

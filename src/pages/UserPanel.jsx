@@ -64,7 +64,7 @@ function UserPanel() {
     <div className=" flex  flex-col items-center ">
       <Navigation />
       <div className="my-8 grid grid-cols-12 w-full max-w-screen-xl">
-        <div className=" col-span-12 md:col-span-4   my-4 px-4 xl:pl-4 w-full">
+        <div className=" col-span-12 md:col-span-4   my-4 px-4 xl:px-0 xl:pl-4 w-full">
           <div className=" rounded-xl items-center flex justify-between bg-white p-4">
             <span className=" flex items-center gap-x-3">
               <span>

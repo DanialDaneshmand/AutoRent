@@ -38,8 +38,8 @@ function Reserve() {
         </div>
       </div>
       <div>
-        <div className=" w-full border my-4 rounded-lg py-2 px-4 flex items-center justify-between">
-          <div className=" flex items-center gap-x-8">
+        <div className=" w-full border my-4 rounded-lg py-2 px-4 flex flex-col sm:flex-row items-center justify-between">
+          <div className=" flex flex-col justify-center gap-y-2 md:gap-y-0 md:flex-row items-center gap-x-8">
             <div className=" flex items-center gap-x-2 text-blue-600">
               <span className=" text-xl">
                 <HiOutlineClock />
@@ -65,13 +65,13 @@ function Reserve() {
             </div>
           </div>
           <div>
-            <button className=" hover:bg-blue-600 hover:text-white border border-blue-600 text-blue-600 rounded-lg py-2 px-8">
+            <button className="hover:bg-blue-600 mt-4 sm:mt-0 hover:text-white border border-blue-600 text-blue-600 rounded-lg py-2 px-8">
               مشاهده جزییات
             </button>
           </div>
         </div>
-        <div className=" w-full border my-4 rounded-lg py-2 px-4 flex items-center justify-between">
-          <div className=" flex items-center gap-x-8">
+        <div className=" w-full border my-4 rounded-lg py-2 px-4 flex flex-col sm:flex-row items-center justify-between">
+          <div className=" flex flex-col justify-center gap-y-2 md:gap-y-0 md:flex-row items-center gap-x-8">
             <div className=" flex items-center gap-x-2 text-blue-600">
               <span className=" text-xl">
                 <HiOutlineClock />
@@ -97,7 +97,7 @@ function Reserve() {
             </div>
           </div>
           <div>
-            <button className="hover:bg-blue-600 hover:text-white border border-blue-600 text-blue-600 rounded-lg py-2 px-8">
+            <button className="hover:bg-blue-600 mt-4 sm:mt-0 hover:text-white border border-blue-600 text-blue-600 rounded-lg py-2 px-8">
               مشاهده جزییات
             </button>
           </div>
