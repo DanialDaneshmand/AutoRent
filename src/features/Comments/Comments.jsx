@@ -9,7 +9,7 @@ function Comments() {
     <div className=" w-full px-4 flex justify-center">
       <div className=" w-full max-w-screen-xl flex flex-col items-center  ">
         <CommentDetail selectedComment={selectedComment} />
-        <div className=" border sm:border-none rounded-xl sm:rounded-none px-2 sm:px-0 h-48 sm:h-auto  overflow-y-scroll mt-8 grid sm:grid-cols-2 lg:grid-cols-4 gap-4 sm:gap-8  py-8 w-full mx-8">
+        <div className=" border sm:border-none rounded-lg sm:rounded-none px-2 sm:px-0 h-48 sm:h-auto  overflow-y-scroll mt-8 grid sm:grid-cols-2 lg:grid-cols-4 gap-4 sm:gap-8  py-2 sm:py-8 w-full mx-8">
           {comments.map((item) => (
             <Comment
               key={item.id}
@@ -72,7 +72,7 @@ function Comment({ item, setSelectedComment, selectedComment }) {
         selectedComment.id === item.id
           ? "bg-[rgb(253,183,19)] border-[rgb(253,183,19)]"
           : "bg-white"
-      } border rounded-xl  py-2 shadow-md cursor-pointer`}
+      } border rounded-md  py-2 shadow-md cursor-pointer`}
     >
       <div className=" flex justify-center gap-x-4 items-center">
         <div>
