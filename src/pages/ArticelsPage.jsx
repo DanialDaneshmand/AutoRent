@@ -14,7 +14,7 @@ function ArticelsPage() {
             className=" block sm:hidden w-screen h-full "
           />
           <img
-            src="./images/header3.jpg"
+            src="./images/header5.jpg"
             alt="auto-rent"
             className=" hidden sm:block w-screen h-[800px] "
           />

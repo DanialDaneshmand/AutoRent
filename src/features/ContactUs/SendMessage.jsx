@@ -45,7 +45,7 @@ function SendMessage() {
           </div>
         </div>
         <div className="sm:py-4 py-0 px-4">
-            <textarea className="sm:mt-8 rounded-lg w-full h-32 border outline-none" name="" id=""></textarea>
+            <textarea className="sm:mt-8 p-4 rounded-lg w-full h-32 border outline-none" name="" id=""></textarea>
             <button className=" w-full my-4 py-2 rounded-lg bg-blue-600 text-white ">ارسال </button>
         </div>
       </div>
