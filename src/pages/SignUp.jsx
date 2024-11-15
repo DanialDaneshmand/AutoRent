@@ -1,19 +1,42 @@
 import React, { useState } from "react";
 import Logo from "../ui/Logo";
-import { Link } from "react-router-dom";
+import { Link, useNavigate } from "react-router-dom";
+import { useForm } from "react-hook-form";
+import { yupResolver } from "@hookform/resolvers/yup";
+import { useUserDispatch } from "../Context/userContext";
+import * as yup from "yup";
+import RHFTextFeild from "../ui/RHFTextFeild";
+import { BiPhone } from "react-icons/bi";
 
 function SignUp() {
-  const [userInfo, setUserInfo] = useState({
-    phone: "",
-    password: " ",
-    email: "",
+  const navigate = useNavigate();
+  const setUser = useUserDispatch();
+  const schema = yup
+    .object({
+      phone: yup
+        .string()
+        .min(10, "   شماره موبایل نامعتبر است.")
+        .max(30)
+        .required("   شماره موبایل الزامی است ."),
+      email: yup
+        .string()
+        .email("ایمیل نا معتبر است")
+        .required("ایمیل الزامی است ."),
+      password: yup.string().required("رمز عبور الزامی است ."),
+    })
+    .required();
+  const {
+    register,
+    handleSubmit,
+    formState: { errors, isLoading },
+  } = useForm({
+    resolver: yupResolver(schema),
+    mode: "onTouched",
   });
-  const handleChange = (e) => {
-    setUserInfo({ ...userInfo, [e.target.name]: e.target.value });
-  };
-  const handleSubmit = (e) => {
-    e.preventDefault();
-    console.log(userInfo);
+
+  const submitHandler = (data) => {
+    setUser(data);
+    navigate("/");
   };
   return (
     <div className=" w-full h-screen flex justify-center items-center py-16">
@@ -25,53 +48,28 @@ function SignUp() {
           <div className=" flex flex-col items-center justify-center h-full py-16 ">
             <p className=" text-2xl text-gray-700 mb-8 font-bold">ثبت نام</p>
             <div>
-              <form onSubmit={handleSubmit}>
-                <div className="my-4">
-                  <label
-                    htmlFor="phone"
-                    className=" block text-gray-500 mb-3 font-bold "
-                  >
-                    شماره موبایل
-                  </label>
-                  <input
-                    type="text"
-                    className="border outline-none py-2 px-4 rounded-lg h-full"
-                    value={userInfo.phone}
-                    onChange={handleChange}
-                    name="phone"
-                  />
-                </div>
-                <div className="my-4">
-                  <label
-                    htmlFor="email"
-                    className=" block text-gray-500 mb-3 font-bold "
-                  >
-                    ایمیل
-                  </label>
-                  <input
-                    type="text"
-                    className="border outline-none py-2 px-4 rounded-lg h-full"
-                    value={userInfo.email}
-                    onChange={handleChange}
-                    name="email"
-                  />
-                </div>
-                <div className=" my-4">
-                  <label
-                    htmlFor="phone"
-                    className=" block text-gray-500 mb-3 font-bold "
-                  >
-                    {" "}
-                    رمز عبور
-                  </label>
-                  <input
-                    type="text"
-                    className="border outline-none py-2 px-4 rounded-lg h-full"
-                    value={userInfo.password}
-                    onChange={handleChange}
-                    name="password"
-                  />
-                </div>
+              <form onSubmit={handleSubmit(submitHandler)}>
+                <RHFTextFeild
+                  errors={errors}
+                  isRequired={true}
+                  title="شماره موبایل"
+                  name="phone"
+                  register={register}
+                />
+                <RHFTextFeild
+                  errors={errors}
+                  isRequired={true}
+                  title=" ایمیل"
+                  name="email"
+                  register={register}
+                />
+                <RHFTextFeild
+                  errors={errors}
+                  isRequired={true}
+                  title=" رمز عبور"
+                  name="password"
+                  register={register}
+                />
                 <button className=" w-full bg-blue-600 text-white rounded-lg py-2 px-4 my-4">
                   ثبت نام
                 </button>

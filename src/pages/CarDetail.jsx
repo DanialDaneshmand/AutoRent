@@ -21,11 +21,16 @@ function CarDetail() {
   return (
     <Layout>
       <Header>
-        <img
-          src="./images/article/5.jpg"
-          alt="auto-rent"
-          className="w-screen h-screen "
-        />
+      <img
+            src="./images/header.jpg"
+            alt="auto-rent"
+            className=" block sm:hidden w-screen h-full "
+          />
+          <img
+            src="./images/header3.jpg"
+            alt="auto-rent"
+            className=" hidden sm:block w-screen h-[800px] "
+          />
         <div className=" absolute z-30 top-0  w-full bg-black opacity-70 h-full rounded-b-xl"></div>
         <div className=" z-30 absolute   bottom-64  flex justify-center w-full">
           <div className=" flex flex-col gap-y-2">

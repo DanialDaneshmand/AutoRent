@@ -13,15 +13,15 @@ import { HiChevronDown } from "react-icons/hi2";
 
 const options = [
   {
+    path: "/",
+    label: "صفحه اصلی",
+  },
+  {
     path: "/rent",
     label: "رزرو خودرو",
   },
   {
-    path: "/a",
-    label: " خدمات ما",
-  },
-  {
-    path: "/a",
+    path: "/articles",
     label: " بلاگ",
   },
   {
@@ -145,7 +145,7 @@ function Navigation() {
         ) : (
           <div className=" hidden md:block w-full ">
             <div className=" flex w-full justify-between ">
-              <ul className="flex gap-x-6 lg:pr-8 items-center text-sm text-gray-500">
+              <ul className="flex gap-x-6 lg:pr-36 items-center text-sm text-gray-500">
                 {options.map((item) => (
                   <li key={item.label}>
                     <NavLink

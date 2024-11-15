@@ -21,6 +21,8 @@ import Reserve from "./pages/Reserve";
 import MyPayment from "./pages/MyPayment";
 import MyLocations from "./pages/MyLocations";
 import MyComments from "./pages/MyComments";
+import ExitPage from "./pages/ExitPage";
+
 
 function App() {
   return (
@@ -46,7 +48,7 @@ function App() {
             <Route path="myPayment" element={<MyPayment />} />
             <Route path="location" element={<MyLocations />} />
             <Route path="myComments" element={<MyComments />} />
-            <Route path="exit" element={<MyComments />} />
+            <Route path="exit" element={<ExitPage />} />
           </Route>
           <Route path="/*" element={<NotFound />} />
         </Routes>

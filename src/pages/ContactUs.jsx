@@ -1,7 +1,7 @@
 import React from "react";
 import Contaxt from "../features/ContactUs/Contaxt";
 import Layout from "../features/Layout/Layout";
-import Header from "../features/Header/Header"
+import Header from "../features/Header/Header";
 import { HiChevronLeft } from "react-icons/hi2";
 import SendMessage from "../features/ContactUs/SendMessage";
 
@@ -10,10 +10,15 @@ function ContactUs() {
     <Layout>
       <Header>
         <img
-          src="./images/article/5.jpg"
+          src="./images/header.jpg"
           alt="auto-rent"
-          className="w-screen h-screen "
+          className=" block sm:hidden w-screen h-full "
         />
+        <img
+            src="./images/header3.jpg"
+            alt="auto-rent"
+            className=" hidden sm:block w-screen h-[800px] "
+          />
         <div className=" absolute z-30 top-0  w-full bg-black opacity-70 h-full rounded-b-xl"></div>
         <div className=" z-30 absolute   bottom-64  flex justify-center w-full">
           <div className=" flex flex-col gap-y-2">
@@ -30,7 +35,7 @@ function ContactUs() {
       </Header>
       <div className=" w-full items-center flex  px-4 flex-col">
         <Contaxt />
-        <SendMessage/>
+        <SendMessage />
       </div>
     </Layout>
   );
