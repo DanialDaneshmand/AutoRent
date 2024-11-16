@@ -5,8 +5,8 @@ import CarListItem from "./CarListItem";
 import Btn from "../../ui/Btn";
 
 function CarList() {
-  const [carlist, setCarList] = useState([]);
-  const [categoryItem, setCategoryItem] = useState("public");
+  const [carlist, setCarList] = useState(cars);
+  const [categoryItem, setCategoryItem] = useState("");
   useEffect(() => {
     if (categoryItem === "economic") {
       const newList = cars.filter((item) => item.sort === "economic");
@@ -31,14 +31,28 @@ function CarList() {
             <span className=" text-[rgb(253,183,19)]">اتو رنت</span>
           </p>
           <div className=" flex gap-x-1 sm:gap-x-3">
-            
-            <Btn title="محبوب" onClick={() => setCategoryItem("public")} />
-            <Btn title="لوکس" onClick={() => setCategoryItem("luxury")} />
-            <Btn title="اقتصادی" onClick={() => setCategoryItem("economic")} />
+            <Btn
+              categoryItem={categoryItem === "public"}
+              title="محبوب"
+              onClick={() => setCategoryItem("public")}
+            />
+            <Btn
+              categoryItem={categoryItem === "luxury"}
+              title="لوکس"
+              onClick={() => setCategoryItem("luxury")}
+            />
+            <Btn
+              categoryItem={categoryItem === "economic"}
+              title="اقتصادی"
+              onClick={() => setCategoryItem("economic")}
+            />
           </div>
         </div>
         <div className="flex justify-center sm:justify-end  w-full ">
-          <button onClick={()=>setCarList(cars)} className="sm:-mt-10 mt-5 ml-4 flex items-center gap-x-2 sm:text-lg text-blue-600">
+          <button
+            onClick={() => setCarList(cars)}
+            className="sm:-mt-10 mt-5 ml-4 flex items-center gap-x-2 sm:text-lg text-blue-600"
+          >
             <span>مشاهده همه</span>
             <span>
               <FaAngleLeft />
