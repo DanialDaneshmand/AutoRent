@@ -7,7 +7,7 @@ function Logo() {
       {/* <span className=" text-yellow-500">
         <FaCarSide />
       </span> */}
-      <img src="/images/logo.png" className=" rounded-full border w-16 h-16" alt="" />
+      <img src="/images/logo.png" className=" rounded-full border w-12 sm:w-16 h-12 sm:h-16" alt="" />
       <span>
         <span className=" text-blue-500">اتو</span>
         <span className=" text-yellow-500">رنت</span>

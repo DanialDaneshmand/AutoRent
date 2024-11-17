@@ -74,10 +74,10 @@ function BottomSection() {
         </p>
       </div>
       <div className=" flex flex-col justify-center gap-y-4 items-center">
-        <Link>دسترسی اسان</Link>
+        <Link to="/rent">دسترسی اسان</Link>
         <Link>سوالات متداول</Link>
-        <Link>تماس با ما </Link>
-        <Link>درباره ما</Link>
+        <Link to="/Contact-us">تماس با ما </Link>
+        <Link to="/about-us">درباره ما</Link>
       </div>
       <div className=" text-center flex flex-col justify-center">
         <p className="text-2xl mb-4">خبرنامه</p>
