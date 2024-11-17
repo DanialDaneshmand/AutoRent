@@ -14,7 +14,7 @@ function CarListItem({ item }) {
         <img
           src={item.imageSrc}
           alt={item.title}
-          className="w-full h-[200px]"
+          className="w-full object-contain h-[200px] "
         />
       </div>
       <p className=" text-2xl font-bold">{item.title}</p>
