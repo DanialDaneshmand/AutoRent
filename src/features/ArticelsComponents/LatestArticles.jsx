@@ -1,6 +1,7 @@
 import React, { useState } from "react";
 import { articles } from "../../../data/data";
 import { HiOutlineClock, HiOutlineEye } from "react-icons/hi2";
+import { toPersianNumbers, toPersianNumbersWithComma } from "../../utils/toPersianNumbers";
 
 function LatestArticles() {
   const [newArticels, setNewArticles] = useState(articles.slice(0, 5));
@@ -30,13 +31,13 @@ function LatestArticles() {
                     <span>
                       <HiOutlineClock />
                     </span>
-                    <span>3 دقیقه</span>
+                    <span>{toPersianNumbers(3)} دقیقه</span>
                   </span>
                   <span className=" flex items-center gap-x-1">
                     <span>
                       <HiOutlineEye />
                     </span>
-                    <span>1,213</span>
+                    <span>{toPersianNumbersWithComma(1213)}</span>
                   </span>
                 </div>
               </div>

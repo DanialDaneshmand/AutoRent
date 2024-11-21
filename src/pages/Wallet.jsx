@@ -1,5 +1,6 @@
 import React from "react";
 import { HiCreditCard } from "react-icons/hi2";
+import { toPersianNumbersWithComma } from "../utils/toPersianNumbers";
 
 function Wallet() {
   return (
@@ -14,18 +15,18 @@ function Wallet() {
       <div className=" flex flex-col items-center py-16">
         <p className=" text-xl text-gray-500 mb-4">موجودی کیف پول</p>
         <div className=" border rounded-xl bg-blue-100 flex justify-center items-center w-64 py-8">
-          <p className=" text-4xl font-bold text-gray-500 ">1,000,000 تومان</p>
+          <p className=" text-4xl font-bold text-gray-500 ">{toPersianNumbersWithComma(1000000)} تومان</p>
         </div>
         <div className=" lg:w-7/12 pr-2">
           <div className=" flex gap-x-3  mt-8 ">
             <div className="border py-3 px-4 md:px-8 rounded-lg text-gray-500 flex justify-center items-center">
-              100,000 تومان
+              {toPersianNumbersWithComma(100000)} تومان
             </div>
             <div className="border py-3 px-4 md:px-8 rounded-lg text-gray-500 flex justify-center items-center">
-              200,000 تومان
+              {toPersianNumbersWithComma(200000)} تومان
             </div>
             <div className="border py-3 px-4 md:px-8 rounded-lg text-gray-500 flex justify-center items-center">
-              300,000 تومان
+              {toPersianNumbersWithComma(300000)} تومان
             </div>
           </div>
           <div className="  mt-4">

@@ -14,7 +14,7 @@ function CarComments() {
               <img
                 src="./images/profile/1.jpg"
                 alt=""
-                className=" w-12 h-12 rounded-md"
+                className=" w-12 h-12 rounded-md object-cover"
               />
             </span>
             <span className=" text-sm text-gray-400">تاریخ 1403/3/12</span>

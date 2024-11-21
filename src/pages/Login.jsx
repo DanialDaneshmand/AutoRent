@@ -77,7 +77,7 @@ function Login() {
         <div>
           <img
             src="./images/loginBg/1.jpg"
-            className="lg:block hidden h-[580px]"
+            className="lg:block hidden h-[580px] object-cover object-left"
             alt=""
           />
         </div>

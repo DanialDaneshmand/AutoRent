@@ -2,6 +2,7 @@ import React from "react";
 import { HiOutlineMapPin } from "react-icons/hi2";
 import { HiDevicePhoneMobile } from "react-icons/hi2";
 import { HiOutlineEnvelope } from "react-icons/hi2";
+import { toPersianNumbers } from "../../utils/toPersianNumbers";
 
 function Contaxt() {
   return (
@@ -14,7 +15,7 @@ function Contaxt() {
             <HiOutlineMapPin />
           </span>
           <span className=" text-gray-600">ادرس :</span>
-          <span>تهران میدان ازادی -پلاک 22</span>
+          <span>تهران میدان ازادی -پلاک {toPersianNumbers(22)}</span>
         </p>
         <p className=" text-gray-400 flex items-center gap-x-1">
           <span>

@@ -1,6 +1,7 @@
 import React from "react";
 import { HiOutlineClock, HiOutlineEye } from "react-icons/hi2";
 import { Link } from "react-router-dom";
+import { toPersianNumbers, toPersianNumbersWithComma } from "../../utils/toPersianNumbers";
 
 function ArticelItem({ item }) {
   return (
@@ -20,13 +21,13 @@ function ArticelItem({ item }) {
             <span>
               <HiOutlineClock />
             </span>
-            <span>3 دقیقه</span>
+            <span>{toPersianNumbers(3)} دقیقه</span>
           </span>
           <span className=" flex items-center gap-x-1">
             <span>
               <HiOutlineEye />
             </span>
-            <span>1,213</span>
+            <span>{toPersianNumbersWithComma(1243)}</span>
           </span>
         </div>
       </div>

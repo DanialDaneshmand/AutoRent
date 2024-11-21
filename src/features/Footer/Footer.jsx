@@ -5,6 +5,7 @@ import { HiOutlineMapPin } from "react-icons/hi2";
 import Logo from "../../ui/Logo";
 import { Link } from "react-router-dom";
 import { FaCopyright } from "react-icons/fa6";
+import { toPersianNumbers } from "../../utils/toPersianNumbers";
 
 function Footer() {
   return (
@@ -33,7 +34,9 @@ function TopSection() {
         </div>
         <div className=" flex flex-col gap-y-4">
           <span>ارتباط با ما </span>
-          <span>09392923907</span>
+          <span>
+            09392923907
+          </span>
         </div>
       </div>
       <div className=" border-l border-gray-300 "></div>
@@ -75,7 +78,7 @@ function BottomSection() {
       </div>
       <div className=" flex flex-col justify-center gap-y-4 items-center">
         <Link to="/rent">دسترسی اسان</Link>
-        <Link>سوالات متداول</Link>
+        <Link to="/general-questions">سوالات متداول</Link>
         <Link to="/Contact-us">تماس با ما </Link>
         <Link to="/about-us">درباره ما</Link>
       </div>

@@ -1,5 +1,6 @@
 import React, { useState } from "react";
 import { HiOutlineClock } from "react-icons/hi2";
+import { toPersianNumbers } from "../utils/toPersianNumbers";
 
 function Reserve() {
   const [count, setCount] = useState(2);
@@ -16,7 +17,7 @@ function Reserve() {
           }`}
         >
           <span>جاری</span>
-          <span className={`${count === 1 && "text-yellow-500"}`}>1</span>
+          <span className={`${count === 1 && "text-yellow-500"}`}>{toPersianNumbers(1)}</span>
         </div>
         <div
           onClick={() => setCount(2)}
@@ -25,7 +26,7 @@ function Reserve() {
           }`}
         >
           <span>انجام شده </span>
-          <span className={`${count === 2 && "text-yellow-500"}`}>2</span>
+          <span className={`${count === 2 && "text-yellow-500"}`}>{toPersianNumbers(2)}</span>
         </div>
         <div
           onClick={() => setCount(3)}
@@ -34,7 +35,7 @@ function Reserve() {
           }`}
         >
           <span>لغو شده</span>
-          <span className={`${count === 3 && "text-yellow-500"}`}>3</span>
+          <span className={`${count === 3 && "text-yellow-500"}`}>{toPersianNumbers(3)}</span>
         </div>
       </div>
       <div>
@@ -61,7 +62,7 @@ function Reserve() {
             </div>
             <div className=" flex flex-col text-gray-500 text-sm">
               <span>بنز g class</span>
-              <span>تاریخ تحویل :11 بهمن 1402</span>
+              <span>تاریخ تحویل :{toPersianNumbers(11)} بهمن {toPersianNumbers(1402)}</span>
             </div>
           </div>
           <div>
@@ -93,7 +94,7 @@ function Reserve() {
             </div>
             <div className=" flex flex-col text-gray-500 text-sm">
               <span>بنز g class</span>
-              <span>تاریخ تحویل :11 بهمن 1402</span>
+              <span>تاریخ تحویل :{toPersianNumbers(11)} بهمن {toPersianNumbers(1402)}</span>
             </div>
           </div>
           <div>

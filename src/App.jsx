@@ -22,6 +22,7 @@ import MyPayment from "./pages/MyPayment";
 import MyLocations from "./pages/MyLocations";
 import MyComments from "./pages/MyComments";
 import ExitPage from "./pages/ExitPage";
+import GeneralQuestionsPage from "./pages/GeneralQuestionsPage";
 
 
 function App() {
@@ -32,6 +33,7 @@ function App() {
           <Route path="/" element={<Home />} />
           <Route path="/login" element={<Login />} />
           <Route path="/signup" element={<SignUp />} />
+          <Route path="/general-questions" element={<GeneralQuestionsPage />} />
           <Route path="/rent" element={<Rent />} />
           <Route path="/carDetail" element={<CarDetail />} />
           <Route path="/userInfo" element={<UserInformation />} />

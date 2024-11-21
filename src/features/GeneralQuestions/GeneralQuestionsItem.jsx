@@ -4,7 +4,7 @@ import { FaRegSquareMinus } from "react-icons/fa6";
 
 function GeneralQuestionsItem({item,selectedId,setSelectedId}) {
   return (
-    <div>
+    <div className=" ml-0 xl:ml-4">
       <div
         className={` transition-all duration-300 my-4 border rounded-lg p-4 bg-white overflow-hidden ${
           selectedId === item.id

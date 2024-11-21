@@ -9,8 +9,10 @@ import { HiOutlineChevronDown } from "react-icons/hi2";
 import TextFeild from "../../ui/TextFeild";
 import Btn from "../../ui/Btn";
 import { Link } from "react-router-dom";
+import { useUser } from "../../Context/userContext";
 
 function RegisterationQuestions() {
+  const user=useUser()
   return (
     <div className=" w-full  bg-white rounded-xl  border p-4">
       <div className=" flex flex-wrap justify-center gap-2 xl:justify-between">
@@ -80,7 +82,7 @@ function RegisterationQuestions() {
             <span className=" text-blue-600 font-bold text-lg">8,500,000</span>
           </span>
         </div>
-        <Link to="/userInfo">
+        <Link to={user.phone?"/userInfo":"/login"}>
           <button className="mt-4 py-2 text-lg px-5 rounded-lg bg-blue-600 text-white w-full flex justify-center ">
             ثبت درخواست 
           </button>

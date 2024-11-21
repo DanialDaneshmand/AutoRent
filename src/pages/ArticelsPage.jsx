@@ -11,15 +11,15 @@ function ArticelsPage() {
       <img
             src="./images/header.jpg"
             alt="auto-rent"
-            className=" block sm:hidden w-screen h-full "
+            className=" block sm:hidden w-screen h-[600px] "
           />
           <img
             src="./images/header5.jpg"
             alt="auto-rent"
-            className=" hidden sm:block w-screen h-[800px] "
+            className=" hidden sm:block w-screen h-[500px] "
           />
         <div className=" absolute z-30 top-0  w-full bg-black opacity-70 h-full rounded-b-xl"></div>
-        <div className=" z-30 absolute   bottom-64  flex justify-center w-full">
+        <div className=" z-30 absolute   bottom-32 sm:bottom-24  flex justify-center w-full">
           <div className=" flex flex-col gap-y-2">
             <p className="  text-4xl text-[rgb(253,183,19)]"> مقالات </p>
             <p className=" text-gray-400 flex items-center">
