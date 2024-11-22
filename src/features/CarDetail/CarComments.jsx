@@ -1,5 +1,7 @@
 import React from "react";
 import { FaStar } from "react-icons/fa6";
+import { toPersianNumbers } from "../../utils/toPersianNumbers";
+
 
 function CarComments() {
   return (
@@ -17,13 +19,13 @@ function CarComments() {
                 className=" w-12 h-12 rounded-md object-cover"
               />
             </span>
-            <span className=" text-sm text-gray-400">تاریخ 1403/3/12</span>
+            <span className=" text-sm text-gray-400">تاریخ {toPersianNumbers(1403)}/{toPersianNumbers(2)}/{toPersianNumbers(12)}</span>
           </span>
-          <span className=" flex items-center gap-x-1">
-            <span>4.2</span>
+          <span className=" flex items-center gap-x-1 ">
             <span className=" text-[rgb(253,183,19)]">
               <FaStar />
             </span>
+            <span>{toPersianNumbers(4.2)}</span>
           </span>
         </div>
         <span className=" text-gray-500 mt-4 block">

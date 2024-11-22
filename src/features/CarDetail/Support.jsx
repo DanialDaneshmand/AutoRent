@@ -1,4 +1,5 @@
 import React from "react";
+import { toPersianNumbers, toPersianNumbersWithComma } from "../../utils/toPersianNumbers";
 
 function Support() {
   return (
@@ -19,23 +20,23 @@ function Support() {
       </div>
       <div className=" flex justify-between text-gray-700 border-b py-4 ">
         <span className=" font-bold w-1/3">قیمت</span>
-        <span className="w-1/3">0</span>
-        <span>32,240,200</span>
+        <span className="w-1/3">{toPersianNumbers(0)}</span>
+        <span>{toPersianNumbersWithComma(32240200)}</span>
       </div>
       <div className=" flex justify-between text-gray-700 border-b py-4 ">
         <span className=" font-bold w-1/3">ودیعه</span>
-        <span className="w-1/3">250,000,000</span>
-        <span>250,000,000</span>
+        <span className="w-1/3">{toPersianNumbersWithComma(250000000)}</span>
+        <span>{toPersianNumbersWithComma(250000000)}</span>
       </div>
       <div className=" flex justify-between text-gray-700 border-b py-4 ">
         <span className=" font-bold w-1/3">حداکثر تعهد خسارت جزیی</span>
-        <span className="w-1/3">250,000,000</span>
-        <span>50,000,000</span>
+        <span className="w-1/3">{toPersianNumbersWithComma(250000000)}</span>
+        <span>{toPersianNumbersWithComma(50000000)}</span>
       </div>
       <div className=" flex justify-between text-gray-700 border-b py-4 ">
         <span className=" font-bold w-1/3">حداکثر تعهد خسارت کلی</span>
-        <span className="w-1/3">500,000,000</span>
-        <span>50,000,000</span>
+        <span className="w-1/3">{toPersianNumbersWithComma(500000000)}</span>
+        <span>{toPersianNumbersWithComma(50000000)}</span>
       </div>
       <div className=" flex justify-between text-gray-700 border-b py-4 ">
         <span className=" font-bold w-1/3">اخذ افت خودرو زمان تصادف</span>

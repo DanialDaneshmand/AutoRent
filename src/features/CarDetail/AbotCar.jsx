@@ -1,6 +1,7 @@
 import React from "react";
 import { FaRegSquareCheck, FaRegStar, FaStar } from "react-icons/fa6";
 import { cars } from "../../../data/data";
+import { toPersianNumbers } from "../../utils/toPersianNumbers";
 
 function AboutCar({state}) {
   return (
@@ -25,7 +26,7 @@ function AboutCar({state}) {
             <span>
               <FaRegSquareCheck />
             </span>
-            <span>حداقل سن راننده :25 سال</span>
+            <span>حداقل سن راننده :{toPersianNumbers(25)} سال</span>
           </span>
         </span>
         <span>
@@ -33,7 +34,7 @@ function AboutCar({state}) {
             <span>
               <FaRegSquareCheck />
             </span>
-            <span>تعداد سرنشین :4 نفر</span>
+            <span>تعداد سرنشین :{toPersianNumbers(4)} نفر</span>
           </span>
         </span>
         <span>
@@ -41,7 +42,7 @@ function AboutCar({state}) {
             <span>
               <FaRegSquareCheck />
             </span>
-            <span>چمدان : 2 چمدان بزرگ</span>
+            <span>چمدان : {toPersianNumbers(2)} چمدان بزرگ</span>
           </span>
         </span>
       </div>

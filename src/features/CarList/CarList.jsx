@@ -3,6 +3,7 @@ import { cars } from "../../../data/data";
 import { FaAngleLeft } from "react-icons/fa6";
 import CarListItem from "./CarListItem";
 import Btn from "../../ui/Btn";
+import { Link } from "react-router-dom";
 
 function CarList() {
   const [carlist, setCarList] = useState(cars);
@@ -49,15 +50,17 @@ function CarList() {
           </div>
         </div>
         <div className="flex justify-center sm:justify-end  w-full ">
-          <button
-            onClick={() => setCarList(cars)}
-            className="sm:-mt-10 mt-5 ml-4 flex items-center gap-x-2 sm:text-lg text-blue-600"
-          >
-            <span>مشاهده همه</span>
-            <span>
-              <FaAngleLeft />
-            </span>
-          </button>
+          <Link to="/rent">
+            <button
+              onClick={() => setCarList(cars)}
+              className="sm:-mt-10 mt-5 ml-4 flex items-center gap-x-2 sm:text-lg text-blue-600"
+            >
+              <span>مشاهده همه</span>
+              <span>
+                <FaAngleLeft />
+              </span>
+            </button>
+          </Link>
         </div>
         <div className=" grid grid-cols-1 sm:grid-cols-2 mx-4  lg:grid-cols-3 gap-8 mt-16">
           {carlist.map((item) => (

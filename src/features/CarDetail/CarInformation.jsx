@@ -1,5 +1,8 @@
 import React from "react";
 import { FaRegSquareCheck } from "react-icons/fa6";
+import { toPersianNumbers } from "../../utils/toPersianNumbers";
+
+
 
 function CarInformation() {
   return (
@@ -14,7 +17,7 @@ function CarInformation() {
           </span>
           <span className=" flex flex-col text-sm ">
             <span className=" text-gray-700">مسافت پیموده </span>
-            <span className=" text-gray-400">12 کیلومتر</span>
+            <span className=" text-gray-400">{toPersianNumbers(12)} کیلومتر</span>
           </span>
         </div>
         <div className=" flex gap-x-2 items-center">
@@ -41,7 +44,7 @@ function CarInformation() {
           </span>
           <span className=" flex flex-col text-sm ">
             <span className=" text-gray-700"> ظرفیت </span>
-            <span className=" text-gray-400">4 نفر </span>
+            <span className=" text-gray-400">{toPersianNumbers(4)} نفر </span>
           </span>
         </div>
         <div className=" flex gap-x-2 items-center">
@@ -59,7 +62,7 @@ function CarInformation() {
           </span>
           <span className=" flex flex-col text-sm ">
             <span className=" text-gray-700"> مدل</span>
-            <span className=" text-gray-400"> 2016</span>
+            <span className=" text-gray-400"> {toPersianNumbers(2016)}</span>
           </span>
         </div>
       </div>

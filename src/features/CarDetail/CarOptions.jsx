@@ -1,5 +1,7 @@
 import React from "react";
 import { FaCircleArrowLeft } from "react-icons/fa6";
+import { toPersianNumbers } from "../../utils/toPersianNumbers";
+
 
 function CarOptions() {
   return (
@@ -29,7 +31,7 @@ function CarOptions() {
             <FaCircleArrowLeft />
           </span>
           <span>
-            <span className=" text-gray-700"> گیربکس 7 سرعته اتوماتیک </span>
+            <span className=" text-gray-700"> گیربکس {toPersianNumbers(7)} سرعته اتوماتیک </span>
           </span>
         </div>
         <div className="  flex gap-x-2 items-center">

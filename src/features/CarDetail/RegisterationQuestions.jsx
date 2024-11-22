@@ -10,6 +10,8 @@ import TextFeild from "../../ui/TextFeild";
 import Btn from "../../ui/Btn";
 import { Link } from "react-router-dom";
 import { useUser } from "../../Context/userContext";
+import { toPersianNumbers, toPersianNumbersWithComma } from "../../utils/toPersianNumbers";
+
 
 function RegisterationQuestions() {
   const user=useUser()
@@ -18,15 +20,15 @@ function RegisterationQuestions() {
       <div className=" flex flex-wrap justify-center gap-2 xl:justify-between">
         <div className=" p-2 bg-slate-200 rounded-lg">
           <span className=" flex gap-x-2 justify-between text-gray-600">
-            <span>از 1 تا 30 روز:</span>
-            <span className=" text-blue-600 font-bold text-lg">12,500,000</span>
+            <span>از {toPersianNumbers(1)} تا {toPersianNumbers(30)} روز:</span>
+            <span className=" text-blue-600 font-bold text-lg">{toPersianNumbersWithComma(12500000)}</span>
             <span>ماهانه</span>
           </span>
         </div>
         <div className=" p-2 bg-slate-200 rounded-lg">
           <span className=" flex gap-x-2 justify-between text-gray-600">
-            <span>از 1 تا 3 روز:</span>
-            <span className=" text-blue-600 font-bold text-lg">2,500,000</span>
+            <span>از {toPersianNumbers(1)} تا {toPersianNumbers(30)} روز:</span>
+            <span className=" text-blue-600 font-bold text-lg">{toPersianNumbersWithComma(2500000)}</span>
             <span>روزانه</span>
           </span>
         </div>
@@ -78,8 +80,8 @@ function RegisterationQuestions() {
         </div>
         <div className=" p-2 bg-slate-200 rounded-lg">
           <span className=" flex gap-x-2  text-gray-600">
-            <span>18 روز :</span>
-            <span className=" text-blue-600 font-bold text-lg">8,500,000</span>
+            <span>{toPersianNumbers(18)} روز :</span>
+            <span className=" text-blue-600 font-bold text-lg">{toPersianNumbersWithComma(8500000)}</span>
           </span>
         </div>
         <Link to={user.phone?"/userInfo":"/login"}>
