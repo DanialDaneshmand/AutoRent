@@ -6,7 +6,7 @@ import { yupResolver } from "@hookform/resolvers/yup";
 import { useUserDispatch } from "../Context/userContext";
 import * as yup from "yup";
 import RHFTextFeild from "../ui/RHFTextFeild";
-import { BiPhone } from "react-icons/bi";
+import toast  from 'react-hot-toast';
 
 function SignUp() {
   const navigate = useNavigate();
@@ -36,6 +36,7 @@ function SignUp() {
 
   const submitHandler = (data) => {
     setUser(data);
+    toast.success("ثبت نام با موفقیت انجام شد")
     navigate("/");
   };
   return (

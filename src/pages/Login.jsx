@@ -6,6 +6,7 @@ import RHFTextFeild from "../ui/RHFTextFeild";
 import * as yup from "yup";
 import { useForm } from "react-hook-form";
 import { yupResolver } from "@hookform/resolvers/yup";
+import toast  from 'react-hot-toast';
 
 function Login() {
   const navigate = useNavigate();
@@ -33,6 +34,7 @@ function Login() {
 
   const submitHandler = (data) => {
     setUser(data)
+    toast.success("ورود با موفقیت انجام شد")
     navigate("/")
   };
 

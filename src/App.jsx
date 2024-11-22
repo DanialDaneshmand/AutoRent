@@ -24,12 +24,14 @@ import MyComments from "./pages/MyComments";
 import ExitPage from "./pages/ExitPage";
 import GeneralQuestionsPage from "./pages/GeneralQuestionsPage";
 import ScrollToTop from "./ui/ScrollToTop";
+import  { Toaster } from 'react-hot-toast';
 
 
 function App() {
   return (
     <UserProvider>
       <div>
+        <Toaster/>
         <ScrollToTop/>
         <Routes>
           <Route path="/" element={<Home />} />

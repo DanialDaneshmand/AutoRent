@@ -2,6 +2,7 @@ import React from "react";
 import { useNavigate } from "react-router-dom";
 import { useUserDispatch } from "../Context/userContext";
 
+
 function ExitPage() {
     const navigate=useNavigate()
     const setUser=useUserDispatch()
